@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>CLASSIC FOOD COURT</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+  <nav>
+    <button onclick="showPage('home')">Home</button>
+    <button onclick="showPage('menu')">Menu</button>
+    <button onclick="showPage('chat')">Chat Assist</button>
+    <button onclick="showPage('contact')">Contact</button>
+  </nav>
+
+  <!-- Home -->
+  <section id="home" class="active">
+    <div class="home-hero">
+      <h1>Welcome to Classic Food Court!</h1>
+      <p>Your go-to place for delicious food and amazing vibes 🍽️</p>
+      <p class="tagline">"Taste the Tradition. Savor the Moment."</p>
+      <a href="#" onclick="showPage('menu')" class="explore-btn">Explore Menu</a>
+    </div>
+    <div class="sliding-offer">
+      <span>SUMMER SPECIAL OFFER !! BUY 1 CHICKEN DISH GET 1 ICE CREAM FREE!!</span>
+    </div>
+  </section>
+
+  <section class="scrolling-food-photos" aria-label="Scrolling food photos">
+    <div class="scrolling-wrapper" aria-hidden="true">
+      <img src="https://images.unsplash.com/photo-1600891964599-f61ba0e24092?auto=format&fit=crop&w=400&q=80" alt="Delicious pizza" />
+      <img src="https://images.unsplash.com/photo-1550547660-d9450f859349?auto=format&fit=crop&w=400&q=80" alt="Tasty burger" />
+      <img src="https://images.unsplash.com/photo-1546069901-ba9599a7e63c?auto=format&fit=crop&w=400&q=80" alt="Fresh sushi" />
+      <img src="https://images.unsplash.com/photo-1504674900247-0877df9cc836?auto=format&fit=crop&w=400&q=80" alt="Spicy tacos" />
+      <img src="https://images.unsplash.com/photo-1565299624946-b28f40a0ae38?auto=format&fit=crop&w=400&q=80" alt="Ramen bowl" />
+      <img src="https://images.unsplash.com/photo-1490645935967-10de6ba17061?auto=format&fit=crop&w=400&q=80" alt="Caesar salad" />
+      <img src="https://images.unsplash.com/photo-1543352634-1e1a0a0a0a0a?auto=format&fit=crop&w=400&q=80" alt="Chocolate cake" />
+      <img src="https://images.unsplash.com/photo-1504674900247-0877df9cc836?auto=format&fit=crop&w=400&q=80" alt="Spaghetti Bolognese" />
+    </div>
+  </section>
+  <!-- Menu -->
+  <section id="menu">
+    <div class="menu-title">CLASSIC FOOD COURT - MENU</div>
+    <div id="menuItems"></div>
+    <div id="total" style="margin-top: 10px; font-weight: bold; font-size: 1.2em;">Total: ₹0</div>
+    <button id="placeOrder">Place Order</button>
+  </section>
+
+  <!-- Chat Assist -->
+  <section id="chat">
+    <h2>Frequently Asked Questions</h2>
+    <div id="faqContainer"></div>
+  </section>
+
+  <!-- Contact -->
+  <section id="contact">
+    <h2>Contact Us</h2>
+    <div style="display: flex; gap: 30px; flex-wrap: wrap;">
+      <div class="contact-details" style="flex: 0 0 55%; min-width: 280px; background: linear-gradient(135deg, rgba(255, 99, 71, 0.6), rgba(255, 69, 0, 0.6)); padding: 15px 18px; border-radius: 12px; box-shadow: 0 0 15px rgba(255, 99, 71, 0.5); color: white; font-weight: 600; font-size: 1em; backdrop-filter: blur(8px);">
+        <p><strong>Address:</strong> Secunderabad, Telangana, India</p>
+        <p><strong>Email:</strong> contact@classicfoodcourt.com</p>
+        <p><strong>Phone:</strong> +91 93920 48214</p>
+        <p><strong>Website:</strong> www.classicfoodcourt.com</p>
+      </div>
+      <div style="flex: 0 0 40%; min-width: 220px; color: white; font-weight: 600; font-size: 1em; backdrop-filter: blur(8px);">
+        <h3 style="margin-top: 0; margin-bottom: 15px; color: #ff6347; font-size: 1.2em;">Location</h3>
+<img src="images/map2.jpg" alt="Location Map" style="width: 100%; border-radius: 12px; box-shadow: 0 0 15px rgba(255, 99, 71, 0.5); object-fit: cover;">
+      </div>
+    </div>
+    <div class="feedback" style="background: linear-gradient(135deg, #4b6cb7, #182848); padding: 25px; border-radius: 20px; box-shadow: 0 0 25px rgba(27, 38, 59, 0.8); color: #f0f4f8; font-weight: 600; font-size: 1.1em; margin-top: 30px; display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 25px; backdrop-filter: blur(10px);">
+      <h3 style="grid-column: 1 / -1; text-align: center; font-size: 2em; margin-bottom: 20px; color: #a8c0ff; font-family: 'Georgia', serif; font-weight: 700; text-shadow: 1px 1px 3px #000;">Customer Reviews</h3>
+      <div style="background: rgba(255, 255, 255, 0.1); padding: 20px; border-radius: 15px; box-shadow: 0 4px 12px rgba(0,0,0,0.3); color: #dbe9ff; font-style: italic; font-family: 'Palatino Linotype', 'Book Antiqua', Palatino, serif; border: 1px solid rgba(255, 255, 255, 0.2); display: flex; align-items: center; gap: 15px;">
+<img src="images/profile.jpg" alt="Abhilash Profile" style="width: 60px; height: 60px; border-radius: 50%; object-fit: cover; border: 2px solid #a8c0ff;">
+        <div>
+          <p>"The food quality is exceptional, and the delivery was prompt. Highly recommend for anyone craving authentic flavors!"</p>
+          <p style="font-weight: 700; margin-top: 15px; text-align: right; color: #1a1a1a; font-family: 'Arial Black', Gadget, sans-serif;">- Abhilash</p>
+        </div>
+      </div>
+      <div style="background: rgba(255, 255, 255, 0.1); padding: 20px; border-radius: 15px; box-shadow: 0 4px 12px rgba(0,0,0,0.3); color: #dbe9ff; font-style: italic; font-family: 'Palatino Linotype', 'Book Antiqua', Palatino, serif; border: 1px solid rgba(255, 255, 255, 0.2); display: flex; align-items: center; gap: 15px;">
+<img src="images/209.jpg" alt="Lokesh Profile" style="width: 60px; height: 60px; border-radius: 50%; object-fit: cover; border: 2px solid #a8c0ff;">
+        <div>
+          <p>"The chicken biryani has a unique taste and it tastes like the AP famous biryani"</p>
+          <p style="font-weight: 700; margin-top: 15px; text-align: right; color: #1a1a1a; font-family: 'Arial Black', Gadget, sans-serif;">- Lokesh</p>
+        </div>
+      </div>
+      <div style="background: rgba(255, 255, 255, 0.1); padding: 20px; border-radius: 15px; box-shadow: 0 4px 12px rgba(0,0,0,0.3); color: #dbe9ff; font-style: italic; font-family: 'Palatino Linotype', 'Book Antiqua', Palatino, serif; border: 1px solid rgba(255, 255, 255, 0.2); display: flex; align-items: center; gap: 15px;">
+<img src="images/211.jpg" alt="Manoj Profile" style="width: 60px; height: 60px; border-radius: 50%; object-fit: cover; border: 2px solid #a8c0ff;">
+        <div>
+          <p>"The ambiance and taste were both top-notch. A great place to enjoy a meal with family and friends."</p>
+          <p style="font-weight: 700; margin-top: 15px; text-align: right; color: #1a1a1a; font-family: 'Arial Black', Gadget, sans-serif;">- Manoj</p>
+        </div>
+      </div>
+      <div style="background: rgba(255, 255, 255, 0.1); padding: 20px; border-radius: 15px; box-shadow: 0 4px 12px rgba(0,0,0,0.3); color: #dbe9ff; font-style: italic; font-family: 'Palatino Linotype', 'Book Antiqua', Palatino, serif; border: 1px solid rgba(255, 255, 255, 0.2); display: flex; align-items: center; gap: 15px;">
+<img src="images/212.jpg" alt="Abhinav Sai Profile" style="width: 60px; height: 60px; border-radius: 50%; object-fit: cover; border: 2px solid #a8c0ff;">
+        <div>
+          <p>"Customer service was excellent and the food was delicious. Highly satisfied with my order."</p>
+          <p style="font-weight: 700; margin-top: 15px; text-align: right; color: #1a1a1a; font-family: 'Arial Black', Gadget, sans-serif;">- Abhinav Sai</p>
+        </div>
+      </div>
+      <div style="background: rgba(255, 255, 255, 0.1); padding: 20px; border-radius: 15px; box-shadow: 0 4px 12px rgba(0,0,0,0.3); color: #dbe9ff; font-style: italic; font-family: 'Palatino Linotype', 'Book Antiqua', Palatino, serif; border: 1px solid rgba(255, 255, 255, 0.2); display: flex; align-items: center; gap: 15px;">
+<img src="images/213.png" alt="Sridhar Profile" style="width: 60px; height: 60px; border-radius: 50%; object-fit: cover; border: 2px solid #a8c0ff;">
+        <div>
+          <p>"The menu offers a great variety and the taste is consistently good. Delivery was quick too."</p>
+          <p style="font-weight: 700; margin-top: 15px; text-align: right; color: #1a1a1a; font-family: 'Arial Black', Gadget, sans-serif;">- Sridhar</p>
+        </div>
+      </div>
+      <div style="background: rgba(255, 255, 255, 0.1); padding: 20px; border-radius: 15px; box-shadow: 0 4px 12px rgba(0,0,0,0.3); color: #dbe9ff; font-style: italic; font-family: 'Palatino Linotype', 'Book Antiqua', Palatino, serif; border: 1px solid rgba(255, 255, 255, 0.2); display: flex; align-items: center; gap: 15px;">
+<img src="images/214.png" alt="Sai Rakshith Profile" style="width: 60px; height: 60px; border-radius: 50%; object-fit: cover; border: 2px solid #a8c0ff;">
+        <div>
+          <p>"Fast delivery and the food arrived fresh and hot. Very pleased with the service."</p>
+          <p style="font-weight: 700; margin-top: 15px; text-align: right; color: #1a1a1a; font-family: 'Arial Black', Gadget, sans-serif;">- Sai Rakshith</p>
+        </div>
+      </div>
+      <div style="background: rgba(255, 255, 255, 0.1); padding: 20px; border-radius: 15px; box-shadow: 0 4px 12px rgba(0,0,0,0.3); color: #dbe9ff; font-style: italic; font-family: 'Palatino Linotype', 'Book Antiqua', Palatino, serif; border: 1px solid rgba(255, 255, 255, 0.2); display: flex; align-items: center; gap: 15px;">
+<img src="images/216.jpg" alt="Sai Krishna Profile" style="width: 60px; height: 60px; border-radius: 50%; object-fit: cover; border: 2px solid #a8c0ff;">
+        <div>
+          <p>"The flavors are authentic and the ambiance is very welcoming. Highly recommend this place!"</p>
+          <p style="font-weight: 700; margin-top: 15px; text-align: right; color: #1a1a1a; font-family: 'Arial Black', Gadget, sans-serif;">- Sai Krishna</p>
+        </div>
+      </div>
+      <div style="background: rgba(255, 255, 255, 0.1); padding: 20px; border-radius: 15px; box-shadow: 0 4px 12px rgba(0,0,0,0.3); color: #dbe9ff; font-style: italic; font-family: 'Palatino Linotype', 'Book Antiqua', Palatino, serif; border: 1px solid rgba(255, 255, 255, 0.2); display: flex; align-items: center; gap: 15px;">
+<img src="images/217.jpg" alt="Sai Varma Profile" style="width: 60px; height: 60px; border-radius: 50%; object-fit: cover; border: 2px solid #a8c0ff;">
+        <div>
+          <p>"Authentic flavors and great service. This is my go-to spot for delicious meals."</p>
+          <p style="font-weight: 700; margin-top: 15px; text-align: right; color: #1a1a1a; font-family: 'Arial Black', Gadget, sans-serif;">- Sai Varma</p>
+        </div>
+      </div>
+    </div>
+    <footer style="text-align: center; margin-top: 50px; color: #eee; font-weight: 600;">
+    </footer>
+  </section>
+
+  <div class="modal-overlay" id="orderModal">
+    <div class="modal" id="modalContent">
+      <h2>Order Summary</h2>
+      <div class="order-summary" id="orderSummary"></div>
+      <button class="close-btn" id="closeModalBtn">Close</button>
+      <button id="proceedPaymentBtn" style="margin-top: 15px; background-color: #4285F4; color: white; padding: 12px 20px; font-size: 1.2em; border-radius: 8px; border: none; cursor: pointer; box-shadow: 0 4px 8px rgba(66, 133, 244, 0.6); transition: background-color 0.3s, box-shadow 0.3s;">Proceed with Payment</button>
+    </div>
+  </div>
+  <script src="script.js"></script>
+</body>
+</html>
